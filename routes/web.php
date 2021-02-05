@@ -13,7 +13,9 @@ use App\Http\Controllers\userscontroller;
 |
 */
 
-
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Route::get('users',[userscontroller::class,'index'])->name('users.index');
 Route::get('users/create',[userscontroller::class,'create'])->name('users.create');
